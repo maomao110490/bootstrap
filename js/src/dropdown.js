@@ -64,7 +64,7 @@ const Dropdown = (($) => {
 
   const Default = {
     placement   : 'bottom',
-    offset      : {}
+    offset      : 0
   }
 
   const DefaultType = {
@@ -143,7 +143,7 @@ const Dropdown = (($) => {
         placement : context._config.placement,
         modifiers : {
           offset : {
-            offset : this.config.offset
+            offset : context._config.offset
           }
         }
       })

@@ -383,8 +383,6 @@ $(function () {
         var $tooltip = $($(this).data('bs.tooltip').tip)
         assert.ok($tooltip.hasClass('bs-tooltip-right'))
         assert.ok($tooltip.attr('style') === undefined)
-        $(this).bootstrapTooltip('hide')
-        $container.remove()
         $styles.remove()
         done()
       })

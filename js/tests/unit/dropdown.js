@@ -275,20 +275,20 @@ $(function () {
     $first.parent('.dropdown')
     .on('shown.bs.dropdown', function () {
       assert.strictEqual($first.parents('.show').length, 1, '"show" class added on click')
-      assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
+      assert.strictEqual($('#qunit-fixture .dropdown-menu.show').length, 1, 'only one dropdown is shown')
       $(document.body).trigger('click')
     }).on('hidden.bs.dropdown', function () {
-      assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
+      assert.strictEqual($('#qunit-fixture .dropdown-menu.show').length, 0, '"show" class removed')
       $last.trigger('click')
     })
 
     $last.parent('.btn-group')
     .on('shown.bs.dropdown', function () {
       assert.strictEqual($last.parent('.show').length, 1, '"show" class added on click')
-      assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
+      assert.strictEqual($('#qunit-fixture .dropdown-menu.show').length, 1, 'only one dropdown is shown')
       $(document.body).trigger('click')
     }).on('hidden.bs.dropdown', function () {
-      assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
+      assert.strictEqual($('#qunit-fixture .dropdown-menu.show').length, 0, '"show" class removed')
       done()
     })
     $first.trigger('click')
@@ -321,24 +321,24 @@ $(function () {
     $first.parent('.dropdown')
     .on('shown.bs.dropdown', function () {
       assert.strictEqual($first.parents('.show').length, 1, '"show" class added on click')
-      assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
+      assert.strictEqual($('#qunit-fixture .dropdown-menu.show').length, 1, 'only one dropdown is shown')
       var e = $.Event('keyup')
       e.which = 9 // Tab
       $(document.body).trigger(e)
     }).on('hidden.bs.dropdown', function () {
-      assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
+      assert.strictEqual($('#qunit-fixture .dropdown-menu.show').length, 0, '"show" class removed')
       $last.trigger('click')
     })
 
     $last.parent('.btn-group')
     .on('shown.bs.dropdown', function () {
       assert.strictEqual($last.parent('.show').length, 1, '"show" class added on click')
-      assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
+      assert.strictEqual($('#qunit-fixture .dropdown-menu.show').length, 1, 'only one dropdown is shown')
       var e = $.Event('keyup')
       e.which = 9 // Tab
       $(document.body).trigger(e)
     }).on('hidden.bs.dropdown', function () {
-      assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
+      assert.strictEqual($('#qunit-fixture .dropdown-menu.show').length, 0, '"show" class removed')
       done()
     })
     $first.trigger('click')
